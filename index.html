@@ -1900,7 +1900,7 @@ function render() {
   if (c) c();
   window.scrollTo(0, y);
 }
-iniciar();
+iniciar().catch((error) => { console.error(error); renderAuth(error.message || "Falha ao iniciar o Casal Inteligente."); });
 </script>
 <!-- Casal Inteligente: autenticação Supabase, dados familiares isolados por RLS e sincronização Realtime. -->
 </body></html>
